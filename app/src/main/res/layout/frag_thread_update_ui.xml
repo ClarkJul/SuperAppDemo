@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/text_test"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="first"
+        android:gravity="center"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btn_handler_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Handler_Post直接跟新UI"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_on_ui_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OnUiThread"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_view_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View_post直接跟新UI"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_handler_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Handler_sendMessage"
+        android:textAllCaps="false"/>
+</LinearLayout>

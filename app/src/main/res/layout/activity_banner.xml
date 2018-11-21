@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_first"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:banner_layout="@layout/diy_banner"
+        app:indicator_drawable_selected="@drawable/blue_radius"
+        app:indicator_drawable_unselected="@drawable/white_radius"
+        app:indicator_height="3dp"
+        app:indicator_margin="1.5dp"
+        app:indicator_width="3dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ffff99" />
+
+    <RelativeLayout
+        android:id="@+id/rl_banner_parent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue">
+        <com.android.clark.superappdemo.banner.custom_banner.CustomBannerViewPager
+            android:id="@+id/custom_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/custom_dot_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:background="@drawable/blue_radius"/>
+
+</LinearLayout>
