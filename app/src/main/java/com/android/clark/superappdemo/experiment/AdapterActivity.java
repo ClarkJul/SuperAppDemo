@@ -2,10 +2,11 @@ package com.android.clark.superappdemo.experiment;
 
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.clark.superappdemo.R;
 

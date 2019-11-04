@@ -2,7 +2,8 @@ package com.android.clark.superappdemo.experiment;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;

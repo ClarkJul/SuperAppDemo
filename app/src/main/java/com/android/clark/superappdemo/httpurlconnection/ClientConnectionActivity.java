@@ -61,14 +61,14 @@ public class ClientConnectionActivity extends Activity implements View.OnClickLi
             public void run()
             {
                 try {
-                    HttpClient httpClient =new DefaultHttpClient();
+/*                    HttpClient httpClient =new DefaultHttpClient();
                     HttpGet httpGet = new HttpGet("http://www.w3cschool.cc/python/python-tutorial.html");
                     HttpResponse httpResponse = httpClient.execute(httpGet);
                     if (httpResponse.getStatusLine().getStatusCode() == 200) {
                         HttpEntity entity = httpResponse.getEntity();
                         detail = EntityUtils.toString(entity, "utf-8");
                         handler.sendEmptyMessage(SHOW_DATA);
-                    }
+                    }*/
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

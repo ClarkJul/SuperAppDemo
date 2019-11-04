@@ -17,7 +17,7 @@
         android:textSize="20sp"
         android:text="没有数据"
         android:gravity="center"/>
-    <androidx.appcompat.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lv_downloaded"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

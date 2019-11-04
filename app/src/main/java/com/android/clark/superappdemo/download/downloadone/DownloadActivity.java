@@ -11,11 +11,12 @@ import android.content.pm.PackageManager;
 import android.os.IBinder;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 import android.os.Bundle;
-import androidx.appcompat.widget.DefaultItemAnimator;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
-import androidx.appcompat.widget.SimpleItemAnimator;
+
 import android.view.View;
 import android.widget.Button;
 

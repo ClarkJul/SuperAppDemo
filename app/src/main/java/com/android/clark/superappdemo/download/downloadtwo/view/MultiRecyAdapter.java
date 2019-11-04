@@ -3,7 +3,7 @@ package com.android.clark.superappdemo.download.downloadtwo.view;
 import android.content.Context;
 import android.graphics.Color;
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;

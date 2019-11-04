@@ -9,13 +9,14 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import androidx.appcompat.widget.DefaultItemAnimator;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
-import androidx.appcompat.widget.SimpleItemAnimator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import com.android.clark.superappdemo.R;
 import com.android.clark.superappdemo.download.downloadtwo.AppInfo;

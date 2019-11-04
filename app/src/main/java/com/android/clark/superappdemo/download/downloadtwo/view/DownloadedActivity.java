@@ -2,9 +2,11 @@ package com.android.clark.superappdemo.download.downloadtwo.view;
 
 import android.os.Environment;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;

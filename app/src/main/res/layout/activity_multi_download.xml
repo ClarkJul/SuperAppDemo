@@ -17,7 +17,7 @@
             android:background="@drawable/as_app_install_button"
             android:text="已下载"/>
     </LinearLayout>
-    <androidx.appcompat.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/download_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
