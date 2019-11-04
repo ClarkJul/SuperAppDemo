@@ -1,7 +1,7 @@
 package com.android.clark.superappdemo.banner.custom_banner;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
+import androidx.viewpager.widget.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;

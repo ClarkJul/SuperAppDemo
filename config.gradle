@@ -1,0 +1,17 @@
+/**
+ 引用步骤：
+ (1) 在 project 下的 build.gradle 文件第一行添加 apply from : "config.gradle"
+ (2) 在各个 module 中用 implemetions rootProject.ext.dependencies['xxx'] 和 annotationProcessor rootProject.ext..dependencies['xxx']
+ **/
+ext{
+    dependencies = [
+            "appcompat"           : "androidx.appcompat:appcompat:1.1.0",
+            "recyclerview"        : "androidx.recyclerview:recyclerview:1.0.0",
+            "easypermissions"     : "pub.devrel:easypermissions:1.2.0",
+            "okhttp3"             : "com.squareup.okhttp3:okhttp:3.11.0",
+            "glide"               : "com.github.bumptech.glide:glide:4.9.0",
+            "gson"                : "com.google.code.gson:gson:2.8.5",
+            "eventbus"            : "org.greenrobot:eventbus:3.1.1",
+            "banner"              : "com.youth.banner:banner:1.4.10",
+    ]
+}

@@ -3,9 +3,9 @@ package com.android.clark.superappdemo.ui_thread_multithread;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextPaint;
 import android.view.View;
 import android.widget.TextView;

@@ -1,6 +1,6 @@
 package com.android.clark.superappdemo.banner.custom_banner;
 
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 
 public class DefaultTransformer implements ViewPager.PageTransformer {

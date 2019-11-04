@@ -1,6 +1,6 @@
 package com.android.clark.superappdemo.banner.custom_banner;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.android.clark.superappdemo.R;

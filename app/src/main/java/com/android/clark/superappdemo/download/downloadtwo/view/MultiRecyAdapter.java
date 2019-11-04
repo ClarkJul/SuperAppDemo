@@ -2,8 +2,8 @@ package com.android.clark.superappdemo.download.downloadtwo.view;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,6 @@ import com.android.clark.superappdemo.download.downloadtwo.Config;
 import com.android.clark.superappdemo.download.downloadtwo.down.MultiDownloadManager;
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MultiRecyAdapter extends RecyclerView.Adapter<MultiRecyAdapter.MyViewHolder> {

@@ -38,7 +38,7 @@
         <activity android:name=".ui_thread_multithread.UIMultiThreadActivity" />
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.android.clark.superappdemo.download.installapk"
             android:exported="false"
             android:grantUriPermissions="true">

@@ -3,14 +3,12 @@ package com.android.clark.superappdemo.banner.custom_banner;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.view.PagerAdapter;
-import android.view.LayoutInflater;
+import androidx.viewpager.widget.PagerAdapter;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.android.clark.superappdemo.R;
 import com.bumptech.glide.Glide;
 
 import java.util.List;

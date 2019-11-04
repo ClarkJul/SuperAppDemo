@@ -2,15 +2,13 @@ package com.android.clark.superappdemo.banner;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.UriMatcher;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,16 +16,13 @@ import android.widget.RelativeLayout;
 
 import com.android.clark.superappdemo.R;
 import com.android.clark.superappdemo.banner.custom_banner.CustomBannerAdapter;
-import com.android.clark.superappdemo.banner.custom_banner.CustomBannerListener;
 import com.android.clark.superappdemo.banner.custom_banner.CustomBannerViewPager;
 import com.android.clark.superappdemo.banner.custom_banner.DefaultTransformer;
-import com.android.clark.superappdemo.banner.custom_banner.SecondTransformer;
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
