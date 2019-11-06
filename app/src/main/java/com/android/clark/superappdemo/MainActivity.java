@@ -16,7 +16,6 @@ import com.android.clark.superappdemo.broadcast.LoginActivity;
 import com.android.clark.superappdemo.contentprovider.ContentProviderActivity;
 import com.android.clark.superappdemo.custom_control.CustomControlActivity;
 import com.android.clark.superappdemo.custom_control.draw_picture.DrawPictureActivity;
-import com.android.clark.superappdemo.download.downloadone.DownloadActivity;
 import com.android.clark.superappdemo.download.downloadtwo.view.MultiDownloadActivity;
 import com.android.clark.superappdemo.eventbus.EventBUS1Activity;
 import com.android.clark.superappdemo.experiment.AdapterActivity;
@@ -24,7 +23,7 @@ import com.android.clark.superappdemo.httpurlconnection.ClientConnectionActivity
 import com.android.clark.superappdemo.httpurlconnection.HttpUrlConnectionActivity;
 import com.android.clark.superappdemo.jiexixml.XmlActivity;
 import com.android.clark.superappdemo.ui_thread_multithread.UIMultiThreadActivity;
-
+import com.clark.download.multidownload.DownloadActivity;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends Activity implements View.OnClickListener {

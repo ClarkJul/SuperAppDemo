@@ -15,7 +15,7 @@ import com.android.clark.superappdemo.R;
 import com.android.clark.superappdemo.download.downloadtwo.AppInfo;
 import com.android.clark.superappdemo.download.downloadtwo.Config;
 import com.android.clark.superappdemo.download.downloadtwo.content_provider.ProviderManager;
-import com.android.clark.superappdemo.download.utils.Utils;
+import com.clark.download.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

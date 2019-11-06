@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.download.utils;
+package com.clark.download.utils;
 
 
 import android.content.Context;

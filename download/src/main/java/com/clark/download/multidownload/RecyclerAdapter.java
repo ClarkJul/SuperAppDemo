@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.download.downloadone;
+package com.clark.download.multidownload;
 
 import android.os.Environment;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.clark.superappdemo.R;
+import com.clark.download.R;
 
 import java.io.File;
 import java.util.List;
@@ -103,28 +103,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         @Override
         public void onClick(View v) {
             Task task = mTasks.get(getLayoutPosition());
-            switch (v.getId()) {
-                case R.id.start_btn:
-                    if (task.isDownloading()) {
-                        startButton.setText("开始");
-                        mListener.onStartButtonClick(task.getUrl(), false);
-                    } else {
-                        startButton.setText("暂停");
-                        mListener.onStartButtonClick(task.getUrl(), true);
-                    }
-                    break;
+            int id = v.getId();
+            if (id == R.id.start_btn) {
+                if (task.isDownloading()) {
+                    startButton.setText("开始");
+                    mListener.onStartButtonClick(task.getUrl(), false);
+                } else {
+                    startButton.setText("暂停");
+                    mListener.onStartButtonClick(task.getUrl(), true);
+                }
+            } else if (id == R.id.cancel_btn) {
+                mListener.onCancelButtonClick(task.getUrl());
+            } else if (id == R.id.open_btn) {
+                String directory = Environment.getExternalStorageDirectory().getAbsolutePath();
+                File file = new File(directory + task.getName());
+                if (!file.exists()) {
 
-                case R.id.cancel_btn:
-                    mListener.onCancelButtonClick(task.getUrl());
-                    break;
-
-                case R.id.open_btn:
-                    String directory = Environment.getExternalStorageDirectory().getAbsolutePath();
-                    File file = new File(directory + task.getName());
-                    if (!file.exists()) {
-
-                    }
-                    break;
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">SuperAppDemo</string>
-
+    <string name="app_name">Download</string>
+    <string name="new_task">新建1</string>
+    <string name="new_task2">新建2</string>
     <string name="test">测试</string>
     <string name="start">继续</string>
     <string name="pause">暂停</string>

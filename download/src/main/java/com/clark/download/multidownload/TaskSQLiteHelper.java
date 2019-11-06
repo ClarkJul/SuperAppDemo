@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.download.downloadone;
+package com.clark.download.multidownload;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

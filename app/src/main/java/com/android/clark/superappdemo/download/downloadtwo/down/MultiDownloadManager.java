@@ -8,7 +8,8 @@ import com.android.clark.superappdemo.download.downloadtwo.AppInfo;
 import com.android.clark.superappdemo.download.downloadtwo.Config;
 import com.android.clark.superappdemo.download.downloadtwo.message.DownloadInfoObserver;
 import com.android.clark.superappdemo.download.downloadtwo.message.DownloadInfoPublisher;
-import com.android.clark.superappdemo.download.utils.InstallUtil;
+import com.clark.download.utils.InstallUtil;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.download.downloadone;
+package com.clark.download.multidownload;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -10,7 +10,8 @@ import androidx.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.clark.superappdemo.R;
+
+import com.clark.download.R;
 
 import java.util.ArrayList;
 import java.util.List;

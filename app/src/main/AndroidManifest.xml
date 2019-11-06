@@ -19,7 +19,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,9 +26,9 @@
         <activity android:name=".contentprovider.ContentProviderActivity" />
         <activity android:name=".httpurlconnection.ClientConnectionActivity" />
         <activity android:name=".jiexixml.XmlActivity" />
-        <activity android:name=".download.downloadone.DownloadActivity" />
+        <activity android:name="com.clark.download.multidownload.DownloadActivity" />
 
-        <service android:name=".download.downloadone.DownloadService" />
+        <service android:name="com.clark.download.multidownload.DownloadService" />
         <service android:name=".download.downloadtwo.service.MultiDownloadService" />
 
         <activity android:name=".download.downloadtwo.view.MultiDownloadActivity" />

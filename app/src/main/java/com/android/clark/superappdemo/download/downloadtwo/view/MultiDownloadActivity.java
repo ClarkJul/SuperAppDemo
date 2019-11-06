@@ -26,7 +26,7 @@ import com.android.clark.superappdemo.download.downloadtwo.down.DownloadInfo;
 import com.android.clark.superappdemo.download.downloadtwo.down.MultiDownloadManager;
 import com.android.clark.superappdemo.download.downloadtwo.message.DownloadInfoObserver;
 import com.android.clark.superappdemo.download.downloadtwo.service.MultiDownloadService;
-import com.android.clark.superappdemo.download.utils.Utils;
+import com.clark.download.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

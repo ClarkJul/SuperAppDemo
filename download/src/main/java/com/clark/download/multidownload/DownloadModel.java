@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.download.downloadone;
+package com.clark.download.multidownload;
 
 /**
  * Created by Luckychuan on 2018/3/14.

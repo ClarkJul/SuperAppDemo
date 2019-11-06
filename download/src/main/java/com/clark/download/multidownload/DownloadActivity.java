@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.download.downloadone;
+package com.clark.download.multidownload;
 
 import android.Manifest;
 import android.app.Activity;
@@ -20,7 +20,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.clark.superappdemo.R;
+
+import com.clark.download.R;
 
 import java.util.List;
 
@@ -31,11 +32,6 @@ public class DownloadActivity extends Activity implements View.OnClickListener {
     private static final String URL2 = "http://s1.music.126.net/download/android/CloudMusic_official_4.0.0_179175.apk";
 
     private static RecyclerAdapter mAdapter;
-
-
-
-
-
 
     //绑定Service，实现Activity和Service通信
     private DownloadService.DownloadBinder mServiceBinder;
@@ -170,26 +166,18 @@ public class DownloadActivity extends Activity implements View.OnClickListener {
 
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.new_task_btn:
-                mServiceBinder.newTask(URL1);
-                break;
-
-            case R.id.new_task2_btn:
-                mServiceBinder.newTask(URL2);
-                break;
-
-            case R.id.stop_service:
-                mServiceBinder.saveProgress();
-                stopService(new Intent(this, DownloadService.class));
-                finish();
-                break;
-            case R.id.finish_activity:
-                finish();
-                break;
+    public void onClick(View view) {
+        int id = view.getId();
+        if (id == R.id.new_task_btn) {
+            mServiceBinder.newTask(URL1);
+        } else if (id == R.id.new_task2_btn) {
+            mServiceBinder.newTask(URL2);
+        } else if (id == R.id.stop_service) {
+            mServiceBinder.saveProgress();
+            stopService(new Intent(this, DownloadService.class));
+            finish();
+        } else if (id == R.id.finish_activity) {
+            finish();
         }
     }
-
-
 }
