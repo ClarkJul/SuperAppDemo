@@ -26,11 +26,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api rootProject.ext.dependencies['appcompat']
-    api rootProject.ext.dependencies['recyclerview']
-    api rootProject.ext.dependencies['okhttp3']
-    api rootProject.ext.dependencies['gson']
-    api rootProject.ext.dependencies['glide']
 
-    implementation project(path: ':common')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

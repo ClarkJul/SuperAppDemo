@@ -26,12 +26,6 @@
         <activity android:name=".contentprovider.ContentProviderActivity" />
         <activity android:name=".httpurlconnection.ClientConnectionActivity" />
         <activity android:name=".jiexixml.XmlActivity" />
-        <activity android:name="com.clark.download.multidownload.DownloadActivity" />
-
-        <service android:name="com.clark.download.multidownload.DownloadService" />
-        <service android:name=".download.downloadtwo.service.MultiDownloadService" />
-
-        <activity android:name=".download.downloadtwo.view.MultiDownloadActivity" />
         <activity android:name=".experiment.AdapterActivity" />
         <activity android:name=".custom_control.animation.AnimationActivity" />
         <activity android:name=".ui_thread_multithread.UIMultiThreadActivity" />
@@ -47,13 +41,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_path" />
         </provider>
-        <provider
-            android:name=".download.downloadtwo.content_provider.DownloadContentProvider"
-            android:authorities="com.android.clark.superappdemo.provider"
-            android:enabled="true"
-            android:exported="true" />
 
-        <activity android:name=".download.downloadtwo.view.DownloadedActivity" />
         <activity android:name=".broadcast.LoginActivity" />
         <activity android:name=".broadcast.BroadcastTestActivity" />
         <activity android:name=".eventbus.EventBUS1Activity" />

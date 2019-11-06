@@ -10,6 +10,67 @@
     android:padding="5dp">
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="四大组件"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务"/>
+            <Button
+                android:id="@+id/btn_broadcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="广播"/>
+            <Button
+                android:id="@+id/btn_content_provider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="内容提供器"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="下载实例（服务）"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_service_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多任务下载" />
+            <Button
+                android:id="@+id/btn_service_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多任务下载实例"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/btn_http_url_connection_get"
@@ -27,31 +88,7 @@
             android:layout_height="wrap_content"
             android:text="解析xml"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_service_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="下载(服务)" />
-        <Button
-            android:id="@+id/btn_service_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="多任务下载"/>
-        <Button
-            android:id="@+id/btn_content_provider"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="内容提供器"/>
-        <Button
-            android:id="@+id/btn_broadcast"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="广播" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

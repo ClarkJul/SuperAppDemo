@@ -1,2 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.clark.download" />
+    package="com.clark.download" >
+    <application>
+        <service android:name=".appdownload.service.MultiDownloadService" />
+
+        <activity android:name=".appdownload.view.MultiDownloadActivity" />
+        <provider
+            android:name=".appdownload.content_provider.DownloadContentProvider"
+            android:authorities="com.android.clark.superappdemo.provider"
+            android:enabled="true"
+            android:exported="true" />
+        <activity android:name=".appdownload.view.DownloadedActivity" />
+        <activity android:name="com.clark.download.multidownload.DownloadActivity" />
+        <service android:name="com.clark.download.multidownload.DownloadService" />
+    </application>
+</manifest>

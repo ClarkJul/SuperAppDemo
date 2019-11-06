@@ -16,17 +16,24 @@ import com.android.clark.superappdemo.broadcast.LoginActivity;
 import com.android.clark.superappdemo.contentprovider.ContentProviderActivity;
 import com.android.clark.superappdemo.custom_control.CustomControlActivity;
 import com.android.clark.superappdemo.custom_control.draw_picture.DrawPictureActivity;
-import com.android.clark.superappdemo.download.downloadtwo.view.MultiDownloadActivity;
 import com.android.clark.superappdemo.eventbus.EventBUS1Activity;
 import com.android.clark.superappdemo.experiment.AdapterActivity;
 import com.android.clark.superappdemo.httpurlconnection.ClientConnectionActivity;
 import com.android.clark.superappdemo.httpurlconnection.HttpUrlConnectionActivity;
 import com.android.clark.superappdemo.jiexixml.XmlActivity;
 import com.android.clark.superappdemo.ui_thread_multithread.UIMultiThreadActivity;
+import com.clark.download.appdownload.view.MultiDownloadActivity;
 import com.clark.download.multidownload.DownloadActivity;
+import com.clark.fourmodule.service.ServiceTestActivity;
+
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity extends Activity implements View.OnClickListener {
+
+
+    //四大组件
+    private Button broadButtton;
+    private Button serviceButton;
 
     private Button getConnectionButtton;
     private Button postConnectionButtton;
@@ -37,7 +44,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button adaButtton;
     private Button animationButtton;
     private Button updateUIButtton;
-    private Button broadButtton;
     private Button eventBusButtton;
     private Button bannerButtton;
     private Button customControlButtton;
@@ -72,6 +78,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         customControlButtton=findViewById(R.id.btn_custom_control);
         drawPicButtton=findViewById(R.id.btn_draw_pic);
         viewPicButtton=findViewById(R.id.btn_view);
+        serviceButton=findViewById(R.id.btn_service);
 
         getConnectionButtton.setOnClickListener(this);
         postConnectionButtton.setOnClickListener(this);
@@ -88,6 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         customControlButtton.setOnClickListener(this);
         drawPicButtton.setOnClickListener(this);
         viewPicButtton.setOnClickListener(this);
+        serviceButton.setOnClickListener(this);
     }
     private void getPermission() {
         String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.REQUEST_INSTALL_PACKAGES};
@@ -170,6 +178,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.btn_view:
 //                intent = new Intent(MainActivity.this, CustomControlActivity.class);
 //                startActivity(intent);
+                break;
+            case R.id.btn_service:
+                intent = new Intent(MainActivity.this, ServiceTestActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

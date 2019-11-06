@@ -1,1 +1,1 @@
-include ':app', ':fourmodule', ':download'
+include ':app', ':fourmodule', ':download', ':common'

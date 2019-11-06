@@ -1,2 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.clark.fourmodule" />
+    package="com.clark.fourmodule">
+
+    <application>
+        <activity android:name=".service.ServiceTestActivity" />
+
+        <service
+            android:name=".service.TestService"
+            android:enabled="true"
+            android:exported="false"></service>
+    </application>
+
+</manifest>

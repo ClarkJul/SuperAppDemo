@@ -34,4 +34,6 @@ dependencies {
     api rootProject.ext.dependencies['eventbus']
     api rootProject.ext.dependencies['banner']
     implementation project(path: ':download')
+    implementation project(path: ':common')
+    implementation project(path: ':fourmodule')
 }
