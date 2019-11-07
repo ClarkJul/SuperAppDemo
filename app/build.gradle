@@ -35,5 +35,5 @@ dependencies {
     implementation rootProject.ext.dependencies['banner']
     implementation project(path: ':download')
     implementation project(path: ':common')
-    implementation project(path: ':fourmodule')
+    implementation project(path: ':four_compenent')
 }
