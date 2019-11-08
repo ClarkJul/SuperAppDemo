@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.broadcast;
+package com.clark.fourmodule.broadcast.simple;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.clark.superappdemo.R;
+import com.clark.fourmodule.R;
 
 public class LoginActivity extends BaseActivity {
 

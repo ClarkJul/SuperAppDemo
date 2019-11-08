@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.broadcast;
+package com.clark.fourmodule.broadcast.simple;
 
 import android.app.Activity;
 

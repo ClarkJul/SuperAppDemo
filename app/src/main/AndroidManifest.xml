@@ -2,11 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.clark.superappdemo">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-
     <application
         android:name=".SupperApplication"
         android:allowBackup="true"
@@ -16,12 +11,20 @@
         android:roundIcon="@mipmap/icon_start"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".main.Main2Activity"></activity>
+        <activity
+            android:name=".main.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".httpurlconnection.HttpUrlConnectionActivity" />
         <activity android:name=".contentprovider.ContentProviderActivity" />
         <activity android:name=".httpurlconnection.ClientConnectionActivity" />
@@ -29,6 +32,14 @@
         <activity android:name=".experiment.AdapterActivity" />
         <activity android:name=".custom_control.animation.AnimationActivity" />
         <activity android:name=".ui_thread_multithread.UIMultiThreadActivity" />
+        <activity android:name="com.clark.fourmodule.broadcast.simple.LoginActivity" />
+        <activity android:name="com.clark.fourmodule.broadcast.simple.BroadcastTestActivity" />
+        <activity android:name=".eventbus.EventBUS1Activity" />
+        <activity android:name=".eventbus.EventBus2Activity" />
+        <activity android:name=".banner.BannerActivity" />
+        <activity android:name=".banner.custom_banner.BannerTestActivity" />
+        <activity android:name=".custom_control.CustomControlActivity" />
+        <activity android:name=".custom_control.draw_picture.DrawPictureActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -41,15 +52,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_path" />
         </provider>
-
-        <activity android:name=".broadcast.LoginActivity" />
-        <activity android:name=".broadcast.BroadcastTestActivity" />
-        <activity android:name=".eventbus.EventBUS1Activity" />
-        <activity android:name=".eventbus.EventBus2Activity" />
-        <activity android:name=".banner.BannerActivity" />
-        <activity android:name=".banner.custom_banner.BannerTestActivity" />
-        <activity android:name=".custom_control.CustomControlActivity" />
-        <activity android:name=".custom_control.draw_picture.DrawPictureActivity"></activity>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
