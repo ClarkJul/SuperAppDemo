@@ -83,7 +83,8 @@ public class MultiDownloadActivity extends Activity implements DownloadInfoObser
     private RecyclerView recy;
 
     private List<AppInfo> appInfos = new ArrayList<>();
-    private MultiRecyAdapter adapter;
+//    private MultiRecyAdapter adapter;
+    private MultiRecyAdapterNew adapter;
 
     private Handler uiHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -131,7 +132,7 @@ public class MultiDownloadActivity extends Activity implements DownloadInfoObser
         recy = findViewById(R.id.download_recycler);
 
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
-        adapter = new MultiRecyAdapter(appInfos, downloadButtonClickListener, this);
+        adapter = new MultiRecyAdapterNew(appInfos, downloadButtonClickListener, this);
         recy.setLayoutManager(manager);
         recy.setItemAnimator(new DefaultItemAnimator());
         //防止进度刷新时闪烁

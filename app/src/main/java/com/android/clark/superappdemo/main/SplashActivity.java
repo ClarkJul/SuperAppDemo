@@ -23,8 +23,8 @@ public class SplashActivity extends AppCompatActivity {
 
     private void goToMain() {
         Intent intent=new Intent();
-//        intent.setClass(SplashActivity.this,MainActivity.class);
-        intent.setClass(SplashActivity.this,Main2Activity.class);
+        intent.setClass(SplashActivity.this,MainActivity.class);
+//        intent.setClass(SplashActivity.this,Main2Activity.class);
         startActivity(intent);
         finish();
     }

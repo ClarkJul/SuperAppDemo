@@ -59,4 +59,10 @@
         app:title_background_color="@color/blue"
         app:title_text="标题6"
         app:title_text_color="@color/black" />
+
+    <com.android.clark.superappdemo.custom_control.CircularProgressButton
+        android:id="@+id/download_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"/>
 </LinearLayout>
