@@ -2,9 +2,9 @@ package com.clark.common.adapter;
 
 
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * @author pengbo
@@ -13,6 +13,7 @@ import java.util.List;
 public abstract class SimpleRecyclerAdapter<T> extends RecyclerView.Adapter<SimpleViewHolder<T>> {
 
     protected List<T> mListData;
+
 
     private SimpleRecyclerAdapter.OnItemClickListener<T> onItemClickListener;
     private SimpleRecyclerAdapter.OnItemLongClickListener<T> mOnItemLongClickListener;

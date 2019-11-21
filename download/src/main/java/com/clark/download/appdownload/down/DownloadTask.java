@@ -46,7 +46,7 @@ public class DownloadTask extends AsyncTask<Void, Integer, Integer> {
         long downloadedLength = 0;
         String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
         File file = new File(directory+"/" + name+".apk");
-        Log.i("--------->","下载路径："+file.getPath());
+        Log.i(TAG,"下载路径："+file.getPath());
         //判断任务是开始还是取消
         if (isCancel) {
             if (file.exists()) {

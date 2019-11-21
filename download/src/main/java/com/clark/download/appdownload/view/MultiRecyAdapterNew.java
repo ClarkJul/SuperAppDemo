@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,6 +50,12 @@ public class MultiRecyAdapterNew extends RecyclerView.Adapter<MultiRecyAdapterNe
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         View view = inflater.inflate(R.layout.download_recycle_item_new, viewGroup, false);
         MyViewHolder holder = new MyViewHolder(view);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mContext,"click positon "+holder.getAdapterPosition(),Toast.LENGTH_SHORT).show();
+            }
+        });
         return holder;
     }
 

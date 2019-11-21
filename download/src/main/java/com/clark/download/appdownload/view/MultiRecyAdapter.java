@@ -45,13 +45,16 @@ public class MultiRecyAdapter extends RecyclerView.Adapter<MultiRecyAdapter.MyVi
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+
         View view = inflater.inflate(R.layout.download_recycle_item, viewGroup, false);
         MyViewHolder holder = new MyViewHolder(view);
+        Log.d(TAG, "onCreateViewHolder: position "+holder.getAdapterPosition());
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int position) {
+        Log.d(TAG, "onBindViewHolder: position "+position);
         final AppInfo appInfo = mDatas.get(position);
         //初始化
         Glide.with(mContext).load(appInfo.icon).into(myViewHolder.appIcon);//注意URL的格式是否正确
@@ -84,7 +87,10 @@ public class MultiRecyAdapter extends RecyclerView.Adapter<MultiRecyAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull List<Object> payloads) {
+        super.onBindViewHolder(holder,position,null);
+        Log.d(TAG, "onBindViewHolder=>payloads: position "+position);
         if (payloads.isEmpty()){
+            Log.d(TAG, "onBindViewHolder=>payloads: payloads.isEmpty");
             onBindViewHolder(holder, position);
         }else {
             final AppInfo appInfo = mDatas.get(position);

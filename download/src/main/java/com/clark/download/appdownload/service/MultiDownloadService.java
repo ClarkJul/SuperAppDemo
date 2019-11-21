@@ -57,23 +57,23 @@ public class MultiDownloadService extends Service {
         return super.onUnbind(intent);
     }
 
-    /**
-     * 处理UI按钮的点击事件
-     */
-    public class DownloadBinder extends Binder {
+/**
+ * 处理UI按钮的点击事件
+ */
+public class DownloadBinder extends Binder {
 
-        public void startDownload(AppInfo appInfo) {
-            Log.i(TAG, "startDownload");
-            mDownloadManager.download(appInfo);
-            getNotificationManager().notify(1, getNotification("正在下载：" + appInfo.name));
-        }
-
-        public void pauseDownload(AppInfo appInfo) {
-            Log.i(TAG, "pauseDownload");
-            mDownloadManager.pauseDownload(appInfo);
-            getNotificationManager().notify(1, getNotification("暂停下载：" + appInfo.name));
-        }
+    public void startDownload(AppInfo appInfo) {
+        Log.i(TAG, "startDownload");
+        mDownloadManager.download(appInfo);
+        getNotificationManager().notify(1, getNotification("正在下载：" + appInfo.name));
     }
+
+    public void pauseDownload(AppInfo appInfo) {
+        Log.i(TAG, "pauseDownload");
+        mDownloadManager.pauseDownload(appInfo);
+        getNotificationManager().notify(1, getNotification("暂停下载：" + appInfo.name));
+    }
+}
 
     /**
      * 创建NotificationManager实例
