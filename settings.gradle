@@ -1,1 +1,1 @@
-include ':app', ':four_compenent', ':download', ':common', ':android_upgradle'
+include ':app', ':four_compenent', ':download', ':common', ':android_upgradle', ':custom_view'
