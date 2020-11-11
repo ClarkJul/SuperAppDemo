@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:orientation="vertical"
+    android:padding="10dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask串行方法 ----> execute"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
     <Button
-        android:layout_centerInParent="true"
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,8 +20,6 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_below="@+id/button"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="还没开始加载!" />
@@ -29,8 +33,6 @@
         android:max="100"
         style="?android:attr/progressBarStyleHorizontal"/>
     <Button
-        android:layout_below="@+id/progress_bar"
-        android:layout_centerInParent="true"
         android:id="@+id/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,4 +44,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="cancel"/>
-</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="AsyncTask并行方法 executeOnExecutor----> execute"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_async2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启并行AsyncTask"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+</LinearLayout>

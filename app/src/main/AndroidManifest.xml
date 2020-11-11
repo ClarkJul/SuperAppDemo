@@ -29,7 +29,6 @@
         <activity android:name=".httpurlconnection.ClientConnectionActivity" />
         <activity android:name=".jiexixml.XmlActivity" />
         <activity android:name=".experiment.AdapterActivity" />
-        <activity android:name=".custom_control.animation.AnimationActivity" />
         <activity android:name=".ui_thread_multithread.UIMultiThreadActivity" />
         <activity android:name="com.clark.fourmodule.broadcast.simple.LoginActivity" />
         <activity android:name="com.clark.fourmodule.broadcast.simple.BroadcastTestActivity" />
@@ -37,8 +36,8 @@
         <activity android:name=".eventbus.EventBus2Activity" />
         <activity android:name=".banner.BannerActivity" />
         <activity android:name=".banner.custom_banner.BannerTestActivity" />
-        <activity android:name=".custom_control.CustomControlActivity" />
-        <activity android:name=".custom_control.draw_picture.DrawPictureActivity" />
+
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -51,6 +50,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_path" />
         </provider>
+
+        <service android:name=".ui_thread_multithread.CustomIntentService"
+            android:enabled="true"
+            android:exported="false"/>
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />

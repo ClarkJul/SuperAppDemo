@@ -15,26 +15,43 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.clark.superappdemo.R;
+import com.clark.common.base.frag.BaseFragment;
 
-public class ThreeFragment extends Fragment {
+import java.util.Date;
+
+public class AsyncTaskFragment extends BaseFragment {
 
     // 线程变量
     MyTask mTask;
-
     // 主布局中的UI组件
     Button button,cancel,pause; // 加载、取消按钮
     TextView text; // 更新的UI组件
     ProgressBar progressBar; // 进度条
-    @Nullable
+    private Button btn2;
+
+    boolean started;
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.frag_thread_three,container,false);
-        button = (Button) view.findViewById(R.id.button);
-        pause = (Button) view.findViewById(R.id.pause);
-        cancel = (Button) view.findViewById(R.id.cancel);
-        text = (TextView) view.findViewById(R.id.text);
-        progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+    protected int getLayoutResId() {
+        return R.layout.frag_thread_three;
+    }
+
+    @Override
+    protected void initView(View rootView) {
+        button = (Button) rootView.findViewById(R.id.button);
+        pause = (Button) rootView.findViewById(R.id.pause);
+        cancel = (Button) rootView.findViewById(R.id.cancel);
+        text = (TextView) rootView.findViewById(R.id.text);
+        progressBar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
+        btn2 = rootView.findViewById(R.id.btn_async2);
+    }
+
+    @Override
+    protected void initData() {
         mTask = new MyTask();
+    }
+
+    @Override
+    protected void initEvent() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +64,10 @@ public class ThreeFragment extends Fragment {
                  *    c. 执行任务中，系统会自动调用AsyncTask的一系列方法：onPreExecute() 、doInBackground()、onProgressUpdate() 、onPostExecute()
                  *    d. 不能手动调用上述方法
                  */
-                mTask.execute();
+                if (mTask.getStatus()== AsyncTask.Status.PENDING)
+                    mTask.execute();
+//                mTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//                new MyTask().execute();
             }
         });
         pause.setOnClickListener(new View.OnClickListener() {
@@ -64,13 +84,26 @@ public class ThreeFragment extends Fragment {
                 mTask.cancel(true);
             }
         });
-        return view;
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!started){
+                    new CustomAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,"1");
+                    new CustomAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,"2");
+                    new CustomAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,"3");
+                    new CustomAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,"4");
+
+/*                    new CustomAsyncTask().execute("1");
+                    new CustomAsyncTask().execute("2");
+                    new CustomAsyncTask().execute("3");
+                    new CustomAsyncTask().execute("4");*/
+                }
+            }
+        });
     }
 
-    class MyTask extends AsyncTask<String, Integer, Integer>{
-
-
+    class MyTask extends AsyncTask<Integer, Integer, Integer>{
         private boolean isPause;
         private int currentCount=0;
         // 方法1：onPreExecute（）
@@ -86,7 +119,7 @@ public class ThreeFragment extends Fragment {
         // 作用：接收输入参数、执行任务中的耗时操作、返回 线程任务执行的结果
         // 此处通过计算从而模拟“加载进度”的情况
         @Override
-        protected Integer doInBackground(String... params) {
+        protected Integer doInBackground(Integer... params) {
             try {
                 int count = 0;
                 int length = 1;
@@ -106,14 +139,14 @@ public class ThreeFragment extends Fragment {
                 e.printStackTrace();
             }
 
-            return null;
+            return -1;
         }
 
         // 方法3：onProgressUpdate（）
         // 作用：在主线程 显示线程任务执行的进度
         @Override
         protected void onProgressUpdate(Integer... progresses) {
-
+            Log.e("MyTask", "onProgressUpdate: progresses="+progresses);
             progressBar.setProgress(progresses[0]);
             text.setText("loading..." + progresses[0] + "%");
 
@@ -123,6 +156,7 @@ public class ThreeFragment extends Fragment {
         // 作用：接收线程任务执行结果、将执行结果显示到UI组件
         @Override
         protected void onPostExecute(Integer result) {
+            Log.e("MyTask", "onPostExecute: result="+result);
             if (result==99){
                 text.setText("暂停");
                 return;
@@ -145,4 +179,25 @@ public class ThreeFragment extends Fragment {
             isPause = pause;
         }
     }
+
+    class CustomAsyncTask extends AsyncTask<String ,Void,String>{
+
+        @Override
+        protected String doInBackground(String... voids) {
+            try {
+                Thread.sleep(3000);
+                return voids[0]+","+new Date().toString();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return "null";
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.e("CustomAsyncTask", "onPostExecute: "+s);
+        }
+    }
+
 }

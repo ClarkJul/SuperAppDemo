@@ -11,12 +11,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.clark.superappdemo.R;
-import com.android.clark.superappdemo.custom_control.animation.AnimationActivity;
 import com.android.clark.superappdemo.banner.BannerActivity;
+import com.clark.custom_view.CustomControlActivity;
+import com.clark.custom_view.animation.AnimationActivity;
+import com.clark.custom_view.draw_picture.DrawPictureActivity;
 import com.clark.fourmodule.broadcast.simple.LoginActivity;
 import com.android.clark.superappdemo.contentprovider.ContentProviderActivity;
-import com.android.clark.superappdemo.custom_control.CustomControlActivity;
-import com.android.clark.superappdemo.custom_control.draw_picture.DrawPictureActivity;
 import com.android.clark.superappdemo.eventbus.EventBUS1Activity;
 import com.android.clark.superappdemo.experiment.AdapterActivity;
 import com.android.clark.superappdemo.httpurlconnection.ClientConnectionActivity;
