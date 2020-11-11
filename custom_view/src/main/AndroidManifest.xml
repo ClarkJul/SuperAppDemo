@@ -3,7 +3,10 @@
     package="com.clark.custom_view">
 
     <application>
-        <activity android:name=".CustomViewActivity"></activity>
+        <activity android:name=".CustomViewActivity" />
+        <activity android:name=".animation.AnimationActivity" />
+        <activity android:name=".CustomControlActivity" />
+        <activity android:name=".draw_picture.DrawPictureActivity" />
     </application>
 
 </manifest>

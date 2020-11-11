@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.custom_control;
+package com.clark.custom_view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -12,11 +12,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.math.BigDecimal;
-
 import androidx.annotation.Nullable;
 
-import com.android.clark.superappdemo.R;
+import java.math.BigDecimal;
 
 public class CircularProgressButton extends View {
     public static final int DEFAULT_STATE=0;

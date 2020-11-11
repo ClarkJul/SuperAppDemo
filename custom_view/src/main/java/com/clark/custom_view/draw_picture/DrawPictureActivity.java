@@ -1,20 +1,20 @@
-package com.android.clark.superappdemo.custom_control.draw_picture;
+package com.clark.custom_view.draw_picture;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.view.View;
-import android.widget.TextView;
-
-import com.android.clark.superappdemo.R;
-import com.android.clark.superappdemo.custom_control.draw_picture.frag.BaseDrawFragment;
-import com.android.clark.superappdemo.custom_control.draw_picture.frag.SecondDrawFragment;
-import com.android.clark.superappdemo.custom_control.draw_picture.frag.ThirdDrawFragment;
+import com.clark.custom_view.R;
+import com.clark.custom_view.draw_picture.frag.BaseDrawFragment;
+import com.clark.custom_view.draw_picture.frag.SecondDrawFragment;
+import com.clark.custom_view.draw_picture.frag.ThirdDrawFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,25 +100,22 @@ public class DrawPictureActivity extends FragmentActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tv_item_one:
-                drawPicViewPager.setCurrentItem(0);
-                tv_item_one.setBackgroundColor(Color.RED);
-                tv_item_two.setBackgroundColor(Color.WHITE);
-                tv_item_three.setBackgroundColor(Color.WHITE);
-                break;
-            case R.id.tv_item_two:
-                drawPicViewPager.setCurrentItem(1);
-                tv_item_one.setBackgroundColor(Color.WHITE);
-                tv_item_two.setBackgroundColor(Color.RED);
-                tv_item_three.setBackgroundColor(Color.WHITE);
-                break;
-            case R.id.tv_item_three:
-                drawPicViewPager.setCurrentItem(2);
-                tv_item_one.setBackgroundColor(Color.WHITE);
-                tv_item_two.setBackgroundColor(Color.WHITE);
-                tv_item_three.setBackgroundColor(Color.RED);
-                break;
+        int id = v.getId();
+        if (id == R.id.tv_item_one) {
+            drawPicViewPager.setCurrentItem(0);
+            tv_item_one.setBackgroundColor(Color.RED);
+            tv_item_two.setBackgroundColor(Color.WHITE);
+            tv_item_three.setBackgroundColor(Color.WHITE);
+        } else if (id == R.id.tv_item_two) {
+            drawPicViewPager.setCurrentItem(1);
+            tv_item_one.setBackgroundColor(Color.WHITE);
+            tv_item_two.setBackgroundColor(Color.RED);
+            tv_item_three.setBackgroundColor(Color.WHITE);
+        } else if (id == R.id.tv_item_three) {
+            drawPicViewPager.setCurrentItem(2);
+            tv_item_one.setBackgroundColor(Color.WHITE);
+            tv_item_two.setBackgroundColor(Color.WHITE);
+            tv_item_three.setBackgroundColor(Color.RED);
         }
     }
 

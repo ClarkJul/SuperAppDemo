@@ -1,9 +1,6 @@
-package com.android.clark.superappdemo.custom_control.animation.frag;
+package com.clark.custom_view.animation.frag;
 
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +20,12 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ToggleButton;
 
-import com.android.clark.superappdemo.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.clark.custom_view.R;
+
 
 public class InterpolatorFragment extends Fragment implements View.OnClickListener {
     private ImageView img;
@@ -113,45 +115,34 @@ public class InterpolatorFragment extends Fragment implements View.OnClickListen
     }
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_acc_dec:
-                animation.setInterpolator(new AccelerateDecelerateInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_acc:
-                animation.setInterpolator(new AccelerateInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_anticipate:
-                animation.setInterpolator(new AnticipateInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_anticipate_overshoot:
-                animation.setInterpolator(new AnticipateOvershootInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_overshoot:
-                animation.setInterpolator(new OvershootInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_bounce:
-                animation.setInterpolator(new BounceInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_cycle:
-                animation.setInterpolator(new CycleInterpolator(2));
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_dec:
-                animation.setInterpolator(new DecelerateInterpolator());
-                img.startAnimation(animation);
-                break;
-            case R.id.btn_linear:
-                animation.setInterpolator(new LinearInterpolator());
-                img.startAnimation(animation);
-                break;
-            default:
-                break;
+        int id = v.getId();
+        if (id == R.id.btn_acc_dec) {
+            animation.setInterpolator(new AccelerateDecelerateInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_acc) {
+            animation.setInterpolator(new AccelerateInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_anticipate) {
+            animation.setInterpolator(new AnticipateInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_anticipate_overshoot) {
+            animation.setInterpolator(new AnticipateOvershootInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_overshoot) {
+            animation.setInterpolator(new OvershootInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_bounce) {
+            animation.setInterpolator(new BounceInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_cycle) {
+            animation.setInterpolator(new CycleInterpolator(2));
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_dec) {
+            animation.setInterpolator(new DecelerateInterpolator());
+            img.startAnimation(animation);
+        } else if (id == R.id.btn_linear) {
+            animation.setInterpolator(new LinearInterpolator());
+            img.startAnimation(animation);
         }
     }
 }

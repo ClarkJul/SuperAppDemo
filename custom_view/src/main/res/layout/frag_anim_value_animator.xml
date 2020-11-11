@@ -31,7 +31,7 @@
         android:background="#4033ee99"
         android:text="动画演示"
         android:gravity="center" />
-    <com.android.clark.superappdemo.custom_control.animation.frag.frag_two.MyPointView
+    <com.clark.custom_view.animation.frag.frag_two.MyPointView
         android:id="@+id/point_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

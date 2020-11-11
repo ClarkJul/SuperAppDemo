@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.android.clark.superappdemo.custom_control.CustomTitleBar
+    <com.clark.custom_view.CustomTitleBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -13,7 +13,7 @@
         app:title_background_color="@color/green"
         app:title_text="标题1" />
 
-    <com.android.clark.superappdemo.custom_control.CustomTitleBar
+    <com.clark.custom_view.CustomTitleBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -21,7 +21,7 @@
         app:title_background_color="@color/green"
         app:title_text="标题2" />
 
-    <com.android.clark.superappdemo.custom_control.CustomTitleBar
+    <com.clark.custom_view.CustomTitleBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -30,7 +30,7 @@
         app:title_background_color="@color/red"
         app:title_text="标题3" />
 
-    <com.android.clark.superappdemo.custom_control.CustomTitleBar
+    <com.clark.custom_view.CustomTitleBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -39,7 +39,7 @@
         app:title_background_color="@color/red"
         app:title_text="标题4" />
 
-    <com.android.clark.superappdemo.custom_control.CustomTitleBar
+    <com.clark.custom_view.CustomTitleBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -49,7 +49,7 @@
         app:title_background_color="@color/blue"
         app:title_text="标题5" />
 
-    <com.android.clark.superappdemo.custom_control.CustomTitleBar
+    <com.clark.custom_view.CustomTitleBar
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -60,7 +60,7 @@
         app:title_text="标题6"
         app:title_text_color="@color/black" />
 
-    <com.android.clark.superappdemo.custom_control.CircularProgressButton
+    <com.clark.custom_view.CircularProgressButton
         android:id="@+id/download_button"
         android:layout_width="80dp"
         android:layout_height="40dp"

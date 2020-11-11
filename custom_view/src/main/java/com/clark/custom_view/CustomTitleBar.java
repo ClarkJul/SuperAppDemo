@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.custom_control;
+package com.clark.custom_view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.android.clark.superappdemo.R;
 
 public class CustomTitleBar extends RelativeLayout {
 

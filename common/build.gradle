@@ -25,7 +25,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies['appcompat']
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }

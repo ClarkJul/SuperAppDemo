@@ -1,12 +1,9 @@
-package com.android.clark.superappdemo.custom_control.animation.frag.frag_two;
+package com.clark.custom_view.animation.frag.frag_two;
 
 import android.animation.Animator;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +13,11 @@ import android.view.animation.BounceInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.android.clark.superappdemo.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import com.clark.custom_view.R;
+
 
 public class ValueAnimatorFragment extends Fragment implements View.OnClickListener {
     private static final int ANIM_TYPE_LOC = 1;
@@ -192,27 +193,21 @@ public class ValueAnimatorFragment extends Fragment implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_start_anim:
-                repeatAnimator = selectAnim();
-                break;
-            case R.id.btn_cancel_anim:
-                if (repeatAnimator != null) {
-                    repeatAnimator.cancel();
-                }
-                break;
-            case R.id.btn_location_anim:
-                animType = ANIM_TYPE_LOC;
-                break;
-            case R.id.btn_color_anim:
-                animType = ANIM_TYPE_COL;
-                break;
-            case R.id.btn_char_anim:
-                animType = ANIM_TYPE_CHA;
-                break;
-            case R.id.btn_point_anim:
-                animType = ANIM_TYPE_POINT;
-                break;
+        int id = v.getId();
+        if (id == R.id.btn_start_anim) {
+            repeatAnimator = selectAnim();
+        } else if (id == R.id.btn_cancel_anim) {
+            if (repeatAnimator != null) {
+                repeatAnimator.cancel();
+            }
+        } else if (id == R.id.btn_location_anim) {
+            animType = ANIM_TYPE_LOC;
+        } else if (id == R.id.btn_color_anim) {
+            animType = ANIM_TYPE_COL;
+        } else if (id == R.id.btn_char_anim) {
+            animType = ANIM_TYPE_CHA;
+        } else if (id == R.id.btn_point_anim) {
+            animType = ANIM_TYPE_POINT;
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.custom_control.draw_picture;
+package com.clark.custom_view.draw_picture;
 
 import android.content.Context;
 import android.graphics.Canvas;

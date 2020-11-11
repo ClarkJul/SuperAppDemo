@@ -1,12 +1,11 @@
-package com.android.clark.superappdemo.custom_control;
+package com.clark.custom_view;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
-import com.android.clark.superappdemo.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CustomControlActivity extends AppCompatActivity {
 

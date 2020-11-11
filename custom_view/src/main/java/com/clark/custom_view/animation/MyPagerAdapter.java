@@ -1,4 +1,4 @@
-package com.android.clark.superappdemo.custom_control.animation;
+package com.clark.custom_view.animation;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

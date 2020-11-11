@@ -6,7 +6,6 @@
     <string name="start">继续</string>
     <string name="pause">暂停</string>
 
-    <string name="stop_service">停止service</string>
     <string name="cancel">取消</string>
     <string name="open">打开</string>
 </resources>
