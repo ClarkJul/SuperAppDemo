@@ -3,13 +3,16 @@
     package="com.clark.process_aidl">
 
     <application>
-        <activity android:name="com.clark.process_aidl.client.AidlActivity"/>
-        <service android:name="com.clark.process_aidl.server.BookManagerService"
-            android:exported="true"
+        <activity android:name=".manual.client.ManualAidlActivity"></activity>
+        <activity android:name=".client.AidlActivity" />
+
+        <service
+            android:name=".server.BookManagerService"
             android:enabled="true"
+            android:exported="true"
             android:process=":remote">
             <intent-filter>
-                <action android:name="com.android.clark.aidlserver.BookManagerService"/>
+                <action android:name="com.android.clark.aidlserver.BookManagerService" />
             </intent-filter>
         </service>
     </application>

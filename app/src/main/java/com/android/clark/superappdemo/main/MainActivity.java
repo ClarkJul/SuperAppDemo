@@ -30,6 +30,7 @@ import com.clark.download.appdownload.view.MultiDownloadActivity;
 import com.clark.download.multidownload.DownloadActivity;
 import com.clark.fourmodule.service.ServiceTestActivity;
 import com.clark.process_aidl.client.AidlActivity;
+import com.clark.process_aidl.manual.client.ManualAidlActivity;
 
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -56,6 +57,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button viewPicButtton;
     private Button threadPoolButtton;
     private Button aidlButtton;
+    private Button manualAidlButtton;
 
     private Intent intent;
 
@@ -87,6 +89,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         serviceButton = findViewById(R.id.btn_service);
         threadPoolButtton = findViewById(R.id.btn_thread_pool);
         aidlButtton = findViewById(R.id.btn_aidl);
+        manualAidlButtton = findViewById(R.id.btn_manual_aidl);
 
         getConnectionButtton.setOnClickListener(this);
         postConnectionButtton.setOnClickListener(this);
@@ -106,6 +109,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         serviceButton.setOnClickListener(this);
         threadPoolButtton.setOnClickListener(this);
         aidlButtton.setOnClickListener(this);
+        manualAidlButtton.setOnClickListener(this);
     }
 
     private void getPermission() {
@@ -200,6 +204,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_aidl:
                 intent = new Intent(MainActivity.this, AidlActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_manual_aidl:
+                intent = new Intent(MainActivity.this, ManualAidlActivity.class);
                 startActivity(intent);
                 break;
             default:

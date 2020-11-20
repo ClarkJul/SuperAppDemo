@@ -23,6 +23,13 @@
                 <action android:name="com.clark.aidl_server.AidlService"/>
             </intent-filter>
         </service>
+        <service android:name=".manual.server.ManualAidlService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.clark.aidl_server.ManualAidlService"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
