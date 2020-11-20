@@ -14,5 +14,6 @@ ext{
             "gson"                : "com.google.code.gson:gson:2.8.5",
             "eventbus"            : "org.greenrobot:eventbus:3.1.1",
             "banner"              : "com.youth.banner:banner:1.4.10",
+            "material"              : "com.google.android.material:material:1.1.0",
     ]
 }

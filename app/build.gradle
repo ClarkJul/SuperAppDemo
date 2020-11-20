@@ -36,9 +36,10 @@ dependencies {
     implementation rootProject.ext.dependencies['gson']
     implementation rootProject.ext.dependencies['eventbus']
     implementation rootProject.ext.dependencies['banner']
+    implementation rootProject.ext.dependencies['material']
     implementation project(path: ':download')
     implementation project(path: ':common')
     implementation project(path: ':four_compenent')
     implementation project(path: ':custom_view')
-    implementation 'com.android.support:support-v4:28.0.0'
+    implementation project(path: ':process_aidl')
 }

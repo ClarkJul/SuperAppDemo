@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clark.process_aidl">
+
+    <application>
+        <activity android:name="com.clark.process_aidl.client.AidlActivity"/>
+        <service android:name="com.clark.process_aidl.server.BookManagerService"
+            android:exported="true"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.android.clark.aidlserver.BookManagerService"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

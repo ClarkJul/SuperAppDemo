@@ -4,7 +4,9 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 
 import com.android.clark.superappdemo.R;
 import com.android.clark.superappdemo.banner.BannerActivity;
+import com.android.clark.superappdemo.ui_thread_multithread.ThreadPoolActivity;
 import com.clark.custom_view.CustomControlActivity;
 import com.clark.custom_view.animation.AnimationActivity;
 import com.clark.custom_view.draw_picture.DrawPictureActivity;
@@ -26,6 +29,7 @@ import com.android.clark.superappdemo.ui_thread_multithread.UIMultiThreadActivit
 import com.clark.download.appdownload.view.MultiDownloadActivity;
 import com.clark.download.multidownload.DownloadActivity;
 import com.clark.fourmodule.service.ServiceTestActivity;
+import com.clark.process_aidl.client.AidlActivity;
 
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -50,9 +54,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button customControlButtton;
     private Button drawPicButtton;
     private Button viewPicButtton;
+    private Button threadPoolButtton;
+    private Button aidlButtton;
 
     private Intent intent;
-
 
 
     @Override
@@ -76,10 +81,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         broadButtton = findViewById(R.id.btn_broadcast);
         eventBusButtton = findViewById(R.id.btn_event_bus);
         bannerButtton = findViewById(R.id.btn_banner);
-        customControlButtton=findViewById(R.id.btn_custom_control);
-        drawPicButtton=findViewById(R.id.btn_draw_pic);
-        viewPicButtton=findViewById(R.id.btn_view);
-        serviceButton=findViewById(R.id.btn_service);
+        customControlButtton = findViewById(R.id.btn_custom_control);
+        drawPicButtton = findViewById(R.id.btn_draw_pic);
+        viewPicButtton = findViewById(R.id.btn_view);
+        serviceButton = findViewById(R.id.btn_service);
+        threadPoolButtton = findViewById(R.id.btn_thread_pool);
+        aidlButtton = findViewById(R.id.btn_aidl);
 
         getConnectionButtton.setOnClickListener(this);
         postConnectionButtton.setOnClickListener(this);
@@ -97,15 +104,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
         drawPicButtton.setOnClickListener(this);
         viewPicButtton.setOnClickListener(this);
         serviceButton.setOnClickListener(this);
+        threadPoolButtton.setOnClickListener(this);
+        aidlButtton.setOnClickListener(this);
     }
+
     private void getPermission() {
-        String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.REQUEST_INSTALL_PACKAGES};
+        String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.REQUEST_INSTALL_PACKAGES};
         if (EasyPermissions.hasPermissions(this, perms)) {
             // 已经申请过权限，做想做的事
-            Log.i("MainActivity","有权限");
+            Log.i("MainActivity", "有权限");
         } else {
             // 没有申请过权限，现在去申请
-            EasyPermissions.requestPermissions(this, "申请权限", 1,perms);
+            EasyPermissions.requestPermissions(this, "申请权限", 1, perms);
         }
     }
 
@@ -182,6 +192,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_service:
                 intent = new Intent(MainActivity.this, ServiceTestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_thread_pool:
+                intent = new Intent(MainActivity.this, ThreadPoolActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_aidl:
+                intent = new Intent(MainActivity.this, AidlActivity.class);
                 startActivity(intent);
                 break;
             default:

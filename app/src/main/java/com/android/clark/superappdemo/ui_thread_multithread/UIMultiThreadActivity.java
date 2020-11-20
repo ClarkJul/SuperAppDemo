@@ -19,6 +19,9 @@ import com.clark.custom_view.animation.MyPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class UIMultiThreadActivity extends AppCompatActivity implements View.OnClickListener {
     private ViewPager mViewPager;
@@ -62,7 +65,6 @@ public class UIMultiThreadActivity extends AppCompatActivity implements View.OnC
         mViewPager.setCurrentItem(0);  //初始化显示第一个页面
         dragSet(Color.GREEN, Color.WHITE, Color.WHITE, Color.WHITE);
 //        tv_item_one.setBackgroundColor(Color.RED);//被选中就为红色
-
     }
 
     private void initListener() {
