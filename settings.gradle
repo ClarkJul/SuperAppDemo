@@ -1,3 +1,4 @@
+include ':test'
 include ':aidl_server'
 include ':process_aidl'
 include ':app', ':four_compenent', ':download', ':common', ':custom_view'

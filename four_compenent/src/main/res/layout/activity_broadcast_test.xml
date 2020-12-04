@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-
+    android:orientation="vertical">
     <Button
         android:id="@+id/btn_force_offline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
         android:text="强制下线"/>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btn_send_static_broad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:onClick="onSendStaticBroadClick"
+        android:text="发送静态广播"/>
+
+    <Button
+        android:id="@+id/btn_send_all_broad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:onClick="onSendAllBroadClick"
+        android:text="发送全局静态广播"/>
+
+    <Button
+        android:id="@+id/btn_send_dy_broad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:onClick="onSendDylBroadClick"
+        android:text="发送动态广播"/>
+
+</LinearLayout>

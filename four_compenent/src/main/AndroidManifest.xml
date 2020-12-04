@@ -3,12 +3,21 @@
     package="com.clark.fourmodule">
 
     <application>
+        <activity android:name=".broadcast.static_broad.ReceiveBroadActivity"></activity>
         <activity android:name=".service.ServiceTestActivity" />
 
         <service
             android:name=".service.TestService"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
+
+        <receiver android:name="com.clark.fourmodule.broadcast.static_broad.StaticBroadReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.clark.StaticBroadReceiver"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -60,6 +60,14 @@
             android:name=".ui_thread_multithread.CustomIntentService"
             android:enabled="true"
             android:exported="false" />
+
+        <receiver android:name="com.clark.fourmodule.broadcast.static_broad.StaticBroadReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.clark.broadcast.StaticBroadReceiver"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

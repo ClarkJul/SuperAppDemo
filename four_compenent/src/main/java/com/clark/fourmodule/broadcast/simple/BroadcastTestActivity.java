@@ -1,5 +1,6 @@
 package com.clark.fourmodule.broadcast.simple;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,5 +24,27 @@ public class BroadcastTestActivity extends BaseActivity {
                 sendBroadcast(intent);
             }
         });
+    }
+
+    public void onSendStaticBroadClick(View view) {
+        //8.0以上 静态广播 以这种方式发送广播
+        Intent intent = new Intent("com.example.test.StaticBroadReceiver");
+        intent.setComponent(new ComponentName("com.example.test","com.example.test.static_broad.StaticBroadReceiver"));
+        sendBroadcast(intent,null);
+    }
+
+    public void onSendAllBroadClick(View view) {
+/*        Intent intent = new Intent("com.clark.StaticBroadReceiver");
+        intent.setComponent(new ComponentName("com.android.clark.superappdemo","com.clark.fourmodule.broadcast.static_broad.StaticBroadReceiver"));
+        sendBroadcast(intent,null);*/
+
+
+        sendBroadcast(new Intent("com.clark.StaticBroadReceiver"));
+    }
+
+    public void onSendDylBroadClick(View view) {
+        String broadcast="com.android.clark.superappdemo.onSendDylBroadClick";
+        Intent intent = new Intent(broadcast);
+        sendBroadcast(intent);
     }
 }
